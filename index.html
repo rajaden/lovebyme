@@ -9,19 +9,19 @@
 <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;600;700&family=Nunito:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 <style>
   :root{
-    --paper:#2B1620;       /* soft dusty maroon background */
-    --paper-dark:#3E2530;  /* subtle raised surface (list items) */
-    --card:#33202A;        /* card surface */
-    --card-border: rgba(255,255,255,0.08);
-    --rose:#7A4650;        /* soft wine accent (envelope body) */
-    --rose-deep:#C99A5B;   /* warm muted gold accent */
-    --ink:#F1E4DE;         /* warm cream text */
-    --polaroid:#EDE4D6;
-    --tape:#8A6A3A;
-    --letter-paper:#F5E9DA; /* the little paper peeking from the envelope */
-    --letter-ink:#4A372C;
-    --tape-stripe:#6E5228;
-    --btn-text:#33202A;
+    --paper:#FDF0F3;       /* soft blush pink-cream background */
+    --paper-dark:#FADCE4;  /* subtle raised surface (list items) */
+    --card:#FFF9F5;        /* card surface, warm cream white */
+    --card-border: rgba(214,120,154,0.2);
+    --rose:#F4B8C8;        /* soft pink accent (envelope body) */
+    --rose-deep:#E38AA8;   /* deeper soft pink accent */
+    --ink:#6E4A57;         /* warm mauve-brown text, easy on the eyes */
+    --polaroid:#FFF6EC;
+    --tape:#F2CBD8;
+    --letter-paper:#FFF8EF; /* the little paper peeking from the envelope */
+    --letter-ink:#6E4A57;
+    --tape-stripe:#E7A9BE;
+    --btn-text:#FFFFFF;
   }
 
   *{ box-sizing:border-box; }
@@ -48,7 +48,7 @@
     position:absolute;
     background: repeating-linear-gradient(135deg, var(--tape), var(--tape) 6px, var(--tape-stripe) 6px, var(--tape-stripe) 8px);
     opacity:0.8;
-    box-shadow:0 1px 3px rgba(0,0,0,0.4);
+    box-shadow:0 1px 3px rgba(200,110,140,0.3);
   }
 
   .card-surface{
@@ -65,7 +65,7 @@
   }
   #cover.hide{ opacity:0; visibility:hidden; pointer-events:none; }
   .envelope{ position:relative; width:260px; height:175px; cursor:pointer; margin:0 auto; }
-  .env-body{ position:absolute; inset:0; background:var(--rose); border-radius:6px; box-shadow:0 15px 35px rgba(0,0,0,0.55); }
+  .env-body{ position:absolute; inset:0; background:var(--rose); border-radius:6px; box-shadow:0 15px 35px rgba(214,120,154,0.35); }
   .env-flap{
     position:absolute; top:0; left:0; right:0; height:92px;
     background:var(--rose-deep);
@@ -78,7 +78,7 @@
   .env-letter{
     position:absolute; left:14px; right:14px; bottom:10px; height:128px;
     background:var(--letter-paper); border-radius:4px 4px 2px 2px;
-    box-shadow:0 -2px 10px rgba(0,0,0,0.25), 0 1px 0 rgba(255,255,255,0.4) inset;
+    box-shadow:0 -2px 10px rgba(214,120,154,0.2), 0 1px 0 rgba(255,255,255,0.6) inset;
     z-index:2; transform-origin:bottom center;
     opacity:0;
     transform: translateY(16px) scale(0.82);
@@ -134,7 +134,7 @@
   }
   .nav-btn:active{ transform:scale(0.94); }
   .nav-btn.disabled{ opacity:0.35; pointer-events:none; }
-  .nav-btn.primary{ background:var(--rose-deep); color:var(--btn-text); box-shadow:0 6px 14px rgba(0,0,0,0.45); }
+  .nav-btn.primary{ background:var(--rose-deep); color:var(--btn-text); box-shadow:0 6px 14px rgba(214,120,154,0.4); }
   .nav-btn.ghost{ background:transparent; color:var(--ink); opacity:0.55; }
   .dots{ display:flex; gap:6px; }
   .dot{ width:7px; height:7px; border-radius:50%; background:var(--ink); opacity:0.18; transition: all .3s ease; }
@@ -145,7 +145,7 @@
   .polaroid{
     position:absolute; inset:0; margin:auto;
     background:var(--polaroid); padding:12px 12px 42px 12px;
-    box-shadow:0 14px 30px rgba(0,0,0,0.55);
+    box-shadow:0 14px 30px rgba(214,120,154,0.3);
     cursor:pointer; user-select:none;
     transition: transform .35s cubic-bezier(.2,.8,.3,1), opacity .35s ease;
   }
@@ -231,7 +231,7 @@
     <section class="page" data-page="1">
       <div class="relative max-w-lg w-full">
         <div class="tape" style="width:80px; height:28px; top:-14px; left:calc(50% - 40px); transform:rotate(-4deg);"></div>
-        <div class="card-surface rounded-sm px-7 py-8 md:px-10 md:py-10" style="box-shadow:0 20px 40px rgba(0,0,0,0.45);">
+        <div class="card-surface rounded-sm px-7 py-8 md:px-10 md:py-10" style="box-shadow:0 20px 40px rgba(214,120,154,0.22);">
           <p class="text-xs tracking-widest uppercase mb-1" style="color:var(--rose-deep); opacity:0.8">Buat kamu</p>
           <p class="font-hand text-3xl mb-4" style="color:var(--rose-deep)">Tentang Kesalahanku</p>
           <div class="space-y-3 text-[14px] md:text-[15px] leading-relaxed" style="color:var(--ink)">
@@ -245,7 +245,7 @@
     <section class="page" data-page="1">
       <div class="relative max-w-lg w-full">
         <div class="tape" style="width:80px; height:28px; top:-14px; left:calc(50% - 40px); transform:rotate(-4deg);"></div>
-        <div class="card-surface rounded-sm px-7 py-8 md:px-10 md:py-10" style="box-shadow:0 20px 40px rgba(0,0,0,0.45);">
+        <div class="card-surface rounded-sm px-7 py-8 md:px-10 md:py-10" style="box-shadow:0 20px 40px rgba(214,120,154,0.22);">
           <p class="text-xs tracking-widest uppercase mb-1" style="color:var(--rose-deep); opacity:0.8">Buat kamu</p>
           <p class="font-hand text-3xl mb-4" style="color:var(--rose-deep)">Yang mau aku bilang</p>
           <div class="space-y-3 text-[14px] md:text-[15px] leading-relaxed" style="color:var(--ink)">
@@ -259,7 +259,7 @@
     <section class="page" data-page="3">
       <div class="relative max-w-lg w-full">
         <div class="tape" style="width:70px; height:26px; top:-14px; right:20px; left:auto; transform:rotate(10deg);"></div>
-        <div class="card-surface rounded-sm px-7 py-8 md:px-10 md:py-10" style="box-shadow:0 20px 40px rgba(0,0,0,0.45);">
+        <div class="card-surface rounded-sm px-7 py-8 md:px-10 md:py-10" style="box-shadow:0 20px 40px rgba(214,120,154,0.22);">
           <p class="text-xs tracking-widest uppercase mb-1" style="color:var(--rose-deep); opacity:0.8">buat kamu</p>
           <p class="font-hand text-3xl mb-4" style="color:var(--rose-deep)">Dari Hatiku</p>
           <div class="space-y-3 text-[14px] md:text-[15px] leading-relaxed" style="color:var(--ink)">
